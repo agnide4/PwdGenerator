@@ -1,19 +1,13 @@
 
 
 //Data needed for functions
-var arraySpc = [];
-var arrayLtr = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
-var arrayLtrLow = [];
+var arraySpc = ['@', '$', '%', '&', '!', '#'];
+let arrayLtr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+var arrayLtrLow = arrayLtr.toLocaleString().toLowerCase().split(',');
 var arrayNbr = [0,1,2,3,4,5,6,7,8,9];
+var pwdLength;
 
 
-
-//Functions for creating lower case array
-for (i= 0 ; i < arrayLtr.length; i++) {
-  arrayLtr[i].Tolowercase();
-  arrayLtrLow.push;
-  i++;
-}
 
 
 
