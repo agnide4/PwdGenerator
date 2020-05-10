@@ -19,6 +19,20 @@
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
+          <div class="form">
+            <h1>Please specify the security features for your password</h1>
+            <input type="checkbox" id="Nbr" name="Number" value="number">
+            <label for="number">Number</label><br>
+            <input type="checkbox" id="Lwr" name="Lower charset" value="Lower">
+            <label for="Lower">Lowercase</label><br>
+            <input type="checkbox" id="Cpl" name="Capital Letter" value="Upper">
+            <label for="Upper">Uppercase</label><br>
+            <input type="checkbox" id="Spcl" name="Special Character" value="S-char">
+            <label for="S-char">Special Characters</label><br>
+            <label for="pwdlength">Password Length (Min 8 Character & Max 128 Characters)</label>
+            <input type="number" id="pwdlength" name="Password Length">
+             
+          </div>
           <textarea
             readonly
             id="password"
@@ -31,6 +45,7 @@
         </div>
       </div>
     </div>
+    
     <script src="script.js"></script>
   </body>
 </html>
