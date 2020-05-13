@@ -43,7 +43,8 @@ function generatePassword() {
   }
 
   if (!document.getElementById("Nbr").checked){
-    if (!document.getElementById("lwr").checked){
+    
+    if (!document.getElementById("Lwr").checked){
       if(!document.getElementById("Cpl").checked){
         if(!document.getElementById("Spcl").checked){
           alert("You must choose at least one option");
