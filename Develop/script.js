@@ -41,17 +41,29 @@ function generatePassword() {
     alert("Please read the instructions");
     return;
   }
-  console.log("generate");
-  console.log(pwdLength);
+
+  if (!document.getElementById("Nbr").checked){
+    if (!document.getElementById("lwr").checked){
+      if(!document.getElementById("Cpl").checked){
+        if(!document.getElementById("Spcl").checked){
+          alert("You must choose at least one option");
+                 console.log("Herr");
+                 return;
+
+        }
+      }
+    }
+  } 
+  
+  //While loop starts iteration up until password length
+  //variable pwdStr is a string to collect each random value from the while loop
   var pwdStr = "";
   let i = 0;
   while (i < pwdLength) {
     if (document.getElementById("Nbr").checked) {
       var nRandom = nbrRandom();
-      console.log("here");
-      console.log(nRandom);
       pwdStr += nRandom;
-      console.log(pwdStr);
+      
       i++;
 
     }
@@ -80,13 +92,14 @@ function generatePassword() {
 }
 
 // Add event listener to generate button
+//Note: When adding a function to an event listener you only need to refer to it by name no parenthesis
 generateBtn.addEventListener("click", writePassword);
 
 
 
 //Write password to the #password input
 function writePassword() {
-  console.log("clicked");
+  
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.textContent = password;
